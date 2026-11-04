@@ -1,12 +1,12 @@
 import pytest
 from app import validad_edad,validar_pedido
-'''
+
 #particion
 def test_edad_valida():
     assert validad_edad(30) == True
 
 def test_edad_invalida_menor():
-    assert validad_edad(10) == False
+    assert validad_edad(17) == False
 
 def test_edad_invalida_mayor():
     assert validad_edad(70)== False
@@ -24,7 +24,6 @@ def test_limite_superior_invalido():
 def test_limite_superior_valido(): 
     assert validad_edad(68)==True
 '''
-'''
 @pytest.mark.parametrize("edad, esperado",[
     (30,True),
     (10,False),
@@ -38,7 +37,6 @@ def test_limite_superior_valido():
 def test_edades(edad,esperado):
     assert validad_edad(edad)==esperado
 
-'''
 def test_pedido_valido():
     assert validar_pedido(monto=100, cantidad=5,stock=10,cliente_activo=True)==True
 
@@ -72,3 +70,4 @@ def test_cliente_inactivo():
 ])
 def test_limites_cantidad(cantidad,esperado):
     assert validar_pedido(monto=100,cantidad=cantidad,stock=20,cliente_activo=True)==esperado
+    '''

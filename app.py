@@ -13,7 +13,7 @@ Stock producto debe alcanzar a lo solicitado
 Cliente activo
 '''
 def validar_pedido(monto,cantidad,stock,cliente_activo):
-    if monto <=0:
+    if monto <=1:
         return False
     if cantidad <1 or cantidad>12: 
         return False
