@@ -3,22 +3,22 @@ name: Despliegue de index.php por ftp
 on: 
   push: 
     branches: 
-      -main
+      - main
 
 jobs: 
   deploy: 
-  runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest 
 
-  steps: 
-    - name: Descargar código
-      uses: actions/cheackout@v6
+    steps: 
+      - name: Descargar código
+        uses: actions/cheackout@v6
 
-    - name: subir index.php por ftp
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.6
-      with: 
-        server: ftp.ipolla.com
-        username: ipollaborrar@ipolla.com
-        password: OHJoGu]L*dFZ]kz2
+      - name: subir index.php por ftp
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with: 
+          server: ftp.ipolla.com
+          username: ipollaborrar@ipolla.com
+          password: OHJoGu]L*dFZ]kz2
 
-        local-dir: ./
-        server-dir: ./
+          local-dir: ./
+          server-dir: ./
