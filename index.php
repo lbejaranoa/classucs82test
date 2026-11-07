@@ -1,1 +1,3 @@
-<? echo "mi mensaje para alumnos logrado con ci y cd y subido al servidor";?>
+<? echo "mi mensaje para alumnos logrado con ci y cd y subido al servidor con cambios";?>
+
+
