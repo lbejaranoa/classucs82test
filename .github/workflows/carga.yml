@@ -1,10 +1,10 @@
 name: Despliegue de index.php por ftp
 
-on: 
-  push: 
-    branches: 
-      - main
-
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+  
 jobs: 
   deploy: 
     name: Carga ftp
@@ -12,7 +12,7 @@ jobs:
 
     steps: 
       - name: Descargar código
-        uses: actions/cheackout@v6
+        uses: actions/checkout@v4
 
       - name: subir index.php por ftp
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
